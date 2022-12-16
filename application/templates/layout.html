@@ -7,7 +7,15 @@
     {% block tital %}{% endblock tital %}
 </head>
 <body>
-    {% block body %}
-    {% endblock body %}
+    <div class="flex-row flex-center height-10 header-bg">
+        <h2>Tom's! Youtube Downloader</h2>
+    </div>
+    <div class="flex-column height-85 content-bg">
+    {% block content %}
+    {% endblock content %}
+    </div>
+    <div class="flex-row flex-center height-5 footer-bg">
+        <h5>Created by: Thomas Hankinson || GitHub Repo: <a href="https://github.com/thankinson/youtubedownloader" target="_blank">Click Here</a></h5>
+    </div>
 </body>
 </html>

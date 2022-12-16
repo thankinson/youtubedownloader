@@ -1,8 +1,12 @@
 from application import app
-from application.service.service import IndexPage
+from application.service.pages import IndexPage, DownloadPage
 
 
 @app.route('/')
 @app.route('/index')
 def  index():
-    return IndexPage.Index
+    return IndexPage.Index()
+
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+    return DownloadPage.Download()

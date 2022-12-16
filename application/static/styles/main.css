@@ -1,7 +1,21 @@
+a, p, h1, h2, h3, h4, h5{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
 body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0px;
+}
+/* background colours */
+.header-bg{
+    background-color: rgb(33, 31, 46);
+}
+.content-bg{
+    background-color: rgb(54, 51, 76);
+}
+.footer-bg{
+    background-color: rgb(33,31,46)
 }

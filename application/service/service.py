@@ -1,5 +1,20 @@
-from flask import redirect, url_for, render_template, request
+from pytube import YouTube
 
-class IndexPage():
-    def Index():
-        return render_template('index.html')
+class DownloadChoice():
+    def VideoDownload(link):
+        youtubeObject = YouTube(link)
+        youtubeObject = youtubeObject.streams.get_highest_resolution()
+        try:
+            youtubeObject.download()
+        except:
+            return 'Download Failed!!!'
+        return 'YES!!! Video Downloaded!!!!'
+
+    def AudioDownload(link):
+        youtubeObject = YouTube(link)
+        youtubeObject = youtubeObject.streams.get_audio_only()
+        try:
+            youtubeObject.download()
+        except:
+            return 'Download Failed!!!'
+        return 'YES!!! Audio Downloaded!!!!'
