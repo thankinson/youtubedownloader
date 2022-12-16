@@ -1,0 +1,7 @@
+**/__pycache__/
+**/venv/
+*.db
+.coverage
+test
+.pytest_cache
+*create.py
